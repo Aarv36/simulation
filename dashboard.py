@@ -35,6 +35,9 @@ df_requests["driver_id"] = df_requests["driver_id"].apply(
 )
 
 df_drivers = pd.read_sql("SELECT * FROM Drivers", conn)
+df_drivers["driver_id"] = df_drivers["driver_id"].apply(
+    lambda x: int.from_bytes(x, byteorder="little") if isinstance(x, bytes) else x
+)
 df_requests["cost"] = pd.to_numeric(df_requests["cost"], errors="coerce")
 
 # Main KPIs
