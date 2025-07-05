@@ -160,10 +160,6 @@ if selected_driver != "All":
     st.write(f"### Rides for {selected_driver}")
     st.dataframe(driver_rides)
 
-with pd.ExcelWriter("UberSimulation_AllTables.xlsx") as writer:
-    for table_name in ["Cities", "PrimeLocations", "Drivers", "RideRequests"]:
-        df = pd.read_sql(f"SELECT * FROM {table_name}", conn)
-        df.to_excel(writer, sheet_name=table_name, index=False)
 
 conn.close()
 #df_requests.to_csv("RideRequests.csv", index=False)
