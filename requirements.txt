@@ -2,10 +2,10 @@ db-sqlite3
 pandas
 numpy
 matplotlib
-random
-datetime
+random2
+DateTime
 timedelta
 folium
-time
+times
 streamlit
-streamlit_folium
+streamlit-folium
