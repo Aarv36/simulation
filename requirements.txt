@@ -1,7 +1,7 @@
 db-sqlite3
 pandas
 numpy
-matplotlib.pyplot
+matplotlib
 random
 datetime
 timedelta
